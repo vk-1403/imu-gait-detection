@@ -1,0 +1,23 @@
+Dataset download instructions
+=============================
+
+1. Visit the Mendeley Data page:
+       https://doi.org/10.17632/92xd6g4xpk.3
+
+2. Download the v3 archive (CC BY 4.0).
+
+3. Extract the .mat trial files into:
+       data/pacini_real/
+
+4. Convert the .mat files to per-trial CSVs with the loader in
+   src/preprocessing.py (function `load_pacini_trial`). Each trial yields
+   two CSV files:
+       data/pacini_real/pacini_T<NN>_lshank.csv
+       data/pacini_real/pacini_T<NN>_rshank.csv
+   with columns: time_s, gyro_z_rad_s, acc_v_m_s2, gt_HS, gt_TO.
+
+5. After conversion, run the evaluation:
+       python scripts/generate_results.py
+
+Raw data are not redistributed in this repository. The dataset licence (CC BY 4.0)
+permits re-use with attribution to the original authors.
