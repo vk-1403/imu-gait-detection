@@ -1,0 +1,9 @@
+# versions used for every result in the paper (Intel Core i5-12400F, Ubuntu 22.04, Python 3.10.12)
+numpy==2.2.6
+scipy==1.15.3
+pandas==2.3.3
+scikit-learn==1.7.2
+torch==2.14.1        # CPU build: pip install torch==2.14.1 --index-url https://download.pytorch.org/whl/cpu
+PyWavelets
+matplotlib
+pyarrow              # only for data/prep/extract_camargo_subset.py

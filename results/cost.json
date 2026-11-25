@@ -1,0 +1,66 @@
+{
+ "recording": "Walking_2.mat",
+ "n_samples": 40345,
+ "peak_anchored": {
+  "ms": 2.7806920115835965,
+  "params": 0
+ },
+ "salarian2004": {
+  "ms": 3.188681512256153,
+  "params": 0
+ },
+ "catalfamo2010": {
+  "ms": 13.495577004505321,
+  "params": 0
+ },
+ "greene2010": {
+  "ms": 2.4768019939074293,
+  "params": 0
+ },
+ "aminian2002": {
+  "ms": 5.3482714865822345,
+  "params": 0
+ },
+ "fixed_threshold": {
+  "ms": 1.4850724837742746,
+  "params": 0
+ },
+ "hgb": {
+  "ms": 162.59396249370184,
+  "params": 10858
+ },
+ "rf": {
+  "ms": 130.6623004929861,
+  "params": 478288
+ },
+ "cnn": {
+  "ms": 7.7039820025675,
+  "params": 17954
+ },
+ "train_s_all_camargo": {
+  "rf": {
+   "HS": 54.9,
+   "TO": 53.2,
+   "threads": 2
+  },
+  "hgb": {
+   "HS": 20.6,
+   "TO": 23.1,
+   "threads": 1
+  },
+  "cnn": {
+   "HS+TO": 88.2,
+   "steps": 1500,
+   "threads": 2
+  }
+ },
+ "machine": {
+  "cpu": "12th Gen Intel(R) Core(TM) i5-12400F",
+  "os": "Ubuntu 22.04.5 VM (Linux-6.8.0-149) on Windows 11 Home 25H2",
+  "python": "3.10.12",
+  "numpy": "2.2.6",
+  "scipy": "1.15.3",
+  "sklearn": "1.7.2",
+  "torch": "2.14.1+cpu"
+ }
+}

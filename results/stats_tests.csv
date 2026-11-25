@@ -1,0 +1,91 @@
+dataset,ref,event,metric,test,comparison,n,stat,p,p_holm
+Pacini,FP,HS,recall,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,27,138.6397828615742,4.550958625274801e-26,
+Pacini,FP,HS,recall,Wilcoxon,proposed vs salarian2004,27,0.125,1.9985491978994876e-05,0.0008194051711387899
+Pacini,FP,HS,recall,Wilcoxon,proposed vs greene2010,27,0.0,0.03466626204698584,0.5893264547987593
+Pacini,FP,HS,recall,Wilcoxon,proposed vs aminian2002,27,0.90625,7.753586175651963e-06,0.0003411577917286864
+Pacini,FP,HS,recall,Wilcoxon,proposed vs catalfamo2010,27,0.0,0.07095060495214468,1.0
+Pacini,FP,HS,recall,Wilcoxon,proposed vs fixed_threshold,27,0.12,3.773450998499057e-05,0.0014339113794296417
+Pacini,FP,HS,recall,Wilcoxon,proposed vs hgb,27,0.02777777777777779,0.014922064632157677,0.3133633572753112
+Pacini,FP,HS,recall,Wilcoxon,proposed vs rf,27,0.0,0.08515968057544043,1.0
+Pacini,FP,HS,recall,Wilcoxon,proposed vs cnn,27,0.0,0.08520755471436131,1.0
+Pacini,FP,TO,recall,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,27,69.29078014184405,6.801433717192967e-12,
+Pacini,FP,TO,recall,Wilcoxon,proposed vs salarian2004,27,0.04761904761904756,5.872290379195549e-05,0.0021140245365103977
+Pacini,FP,TO,recall,Wilcoxon,proposed vs greene2010,27,0.0,0.36299058407178664,1.0
+Pacini,FP,TO,recall,Wilcoxon,proposed vs aminian2002,27,0.0,0.009924437061874696,0.228262052423118
+Pacini,FP,TO,recall,Wilcoxon,proposed vs catalfamo2010,27,0.0,0.002872400058851725,0.07181000147129313
+Pacini,FP,TO,recall,Wilcoxon,proposed vs fixed_threshold,27,0.0,1.0,1.0
+Pacini,FP,TO,recall,Wilcoxon,proposed vs hgb,27,0.0,0.01574430634371498,0.3148861268742996
+Pacini,FP,TO,recall,Wilcoxon,proposed vs rf,27,0.0,0.7150006546880893,1.0
+Pacini,FP,TO,recall,Wilcoxon,proposed vs cnn,27,0.0,0.9893665790297449,1.0
+Camargo,FP,HS,recall,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,22,153.62424242424242,3.4365850920755044e-29,
+Camargo,FP,HS,recall,Wilcoxon,proposed vs salarian2004,22,0.14247896527140302,9.5367431640625e-07,5.435943603515625e-05
+Camargo,FP,HS,recall,Wilcoxon,proposed vs greene2010,22,0.04424162574121904,4.76837158203125e-06,0.00021457672119140625
+Camargo,FP,HS,recall,Wilcoxon,proposed vs aminian2002,22,0.4595446978024919,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,HS,recall,Wilcoxon,proposed vs catalfamo2010,22,-0.007682789208127483,0.00042819976806640625,0.013702392578125
+Camargo,FP,HS,recall,Wilcoxon,proposed vs fixed_threshold,22,0.2834103039993974,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,HS,recall,Wilcoxon,proposed vs hgb,22,0.056616788088295567,9.5367431640625e-07,5.435943603515625e-05
+Camargo,FP,HS,recall,Wilcoxon,proposed vs rf,22,0.02072534130308773,0.0016727447509765625,0.043491363525390625
+Camargo,FP,HS,recall,Wilcoxon,proposed vs cnn,22,0.03202864963252422,2.6226043701171875e-05,0.0010228157043457031
+Camargo,FP,TO,recall,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,22,150.32727272727277,1.6755822721104857e-28,
+Camargo,FP,TO,recall,Wilcoxon,proposed vs salarian2004,22,-0.02251168224014527,4.1961669921875e-05,0.001552581787109375
+Camargo,FP,TO,recall,Wilcoxon,proposed vs greene2010,22,0.31311681853864787,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,TO,recall,Wilcoxon,proposed vs aminian2002,22,-0.0008058220201317412,0.4060330390930176,1.0
+Camargo,FP,TO,recall,Wilcoxon,proposed vs catalfamo2010,22,0.17532296121352026,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,TO,recall,Wilcoxon,proposed vs fixed_threshold,22,0.04347221445056765,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,TO,recall,Wilcoxon,proposed vs hgb,22,-0.00867544132445619,0.46277761459350586,1.0
+Camargo,FP,TO,recall,Wilcoxon,proposed vs rf,22,-0.022455817984160076,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,TO,recall,Wilcoxon,proposed vs cnn,22,-0.02523376104069841,6.532669067382812e-05,0.0022864341735839844
+Camargo,gc,HS,f1,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,22,160.12121212121212,1.5086855370828393e-30,
+Camargo,gc,HS,f1,Wilcoxon,proposed vs salarian2004,22,0.09677754938066324,1.430511474609375e-06,7.43865966796875e-05
+Camargo,gc,HS,f1,Wilcoxon,proposed vs greene2010,22,-0.027885033432827,2.384185791015625e-06,0.00011920928955078125
+Camargo,gc,HS,f1,Wilcoxon,proposed vs aminian2002,22,0.42024985451356667,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,HS,f1,Wilcoxon,proposed vs catalfamo2010,22,-0.014014273356043938,2.0503997802734375e-05,0.000820159912109375
+Camargo,gc,HS,f1,Wilcoxon,proposed vs fixed_threshold,22,0.1302736532328448,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,HS,f1,Wilcoxon,proposed vs hgb,22,-0.034308227211542974,0.017200946807861328,0.32681798934936523
+Camargo,gc,HS,f1,Wilcoxon,proposed vs rf,22,-0.057781429708017695,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,HS,f1,Wilcoxon,proposed vs cnn,22,-0.06265177618781465,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,TO,f1,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,22,153.9515151515152,2.936275918456355e-29,
+Camargo,gc,TO,f1,Wilcoxon,proposed vs salarian2004,22,0.018783107705803048,0.0009412765502929688,0.026355743408203125
+Camargo,gc,TO,f1,Wilcoxon,proposed vs greene2010,22,0.2613401355994493,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,TO,f1,Wilcoxon,proposed vs aminian2002,22,0.024613700569384556,0.0005044937133789062,0.015134811401367188
+Camargo,gc,TO,f1,Wilcoxon,proposed vs catalfamo2010,22,0.21163041469494326,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,TO,f1,Wilcoxon,proposed vs fixed_threshold,22,0.021678322987404908,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,TO,f1,Wilcoxon,proposed vs hgb,22,0.006429154224928901,0.6556386947631836,1.0
+Camargo,gc,TO,f1,Wilcoxon,proposed vs rf,22,-0.03109094589413186,4.76837158203125e-07,3.719329833984375e-05
+Camargo,gc,TO,f1,Wilcoxon,proposed vs cnn,22,-0.041226224437235726,4.76837158203125e-07,3.719329833984375e-05
+Pacini,FP,HS,mae,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,19,110.27368421052631,3.344910907173519e-20,
+Pacini,FP,HS,mae,Wilcoxon,proposed vs salarian2004,27,-2.7031249999986855,0.4698396325111389,1.0
+Pacini,FP,HS,mae,Wilcoxon,proposed vs greene2010,27,-46.90038314176147,1.4901161193847656e-08,1.1920928955078125e-06
+Pacini,FP,HS,mae,Wilcoxon,proposed vs aminian2002,19,-40.626666666664995,3.814697265625e-06,0.00017547607421875
+Pacini,FP,HS,mae,Wilcoxon,proposed vs catalfamo2010,27,-1.0937499999999396,0.6963860541582108,1.0
+Pacini,FP,HS,mae,Wilcoxon,proposed vs fixed_threshold,27,-42.47999999999989,2.9802322387695312e-08,2.3543834686279297e-06
+Pacini,FP,HS,mae,Wilcoxon,proposed vs hgb,27,-10.062500000000856,0.0001253187656402588,0.004260838031768799
+Pacini,FP,HS,mae,Wilcoxon,proposed vs rf,27,-11.92857142857067,1.3470649719238281e-05,0.0005657672882080078
+Pacini,FP,HS,mae,Wilcoxon,proposed vs cnn,27,-6.87037037037107,0.0004787445068359375,0.014841079711914062
+Pacini,FP,TO,mae,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,27,63.04139433551194,1.175760358112949e-10,
+Pacini,FP,TO,mae,Wilcoxon,proposed vs salarian2004,27,-3.5399999999998126,0.003550395369529724,0.08520948886871338
+Pacini,FP,TO,mae,Wilcoxon,proposed vs greene2010,27,-11.166666666666755,2.041459083557129e-06,0.00010411441326141357
+Pacini,FP,TO,mae,Wilcoxon,proposed vs aminian2002,27,0.9333333333338238,0.1775200217962265,1.0
+Pacini,FP,TO,mae,Wilcoxon,proposed vs catalfamo2010,27,-0.5287356321852386,0.3361395001411438,1.0
+Pacini,FP,TO,mae,Wilcoxon,proposed vs fixed_threshold,27,0.0,1.0,1.0
+Pacini,FP,TO,mae,Wilcoxon,proposed vs hgb,27,-3.534482758620907,0.01738584041595459,0.32681798934936523
+Pacini,FP,TO,mae,Wilcoxon,proposed vs rf,27,-5.196428571426706,0.014005735516548157,0.30812618136405945
+Pacini,FP,TO,mae,Wilcoxon,proposed vs cnn,27,-8.696428571426924,0.0007440149784088135,0.02157643437385559
+Camargo,FP,HS,mae,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,22,146.13333333333333,1.2546037302998358e-27,
+Camargo,FP,HS,mae,Wilcoxon,proposed vs salarian2004,22,16.34581656937572,9.5367431640625e-07,5.435943603515625e-05
+Camargo,FP,HS,mae,Wilcoxon,proposed vs greene2010,22,-25.68482331992023,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,HS,mae,Wilcoxon,proposed vs aminian2002,22,-26.346545983843644,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,HS,mae,Wilcoxon,proposed vs catalfamo2010,22,13.987067492352068,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,HS,mae,Wilcoxon,proposed vs fixed_threshold,22,-19.280693883094457,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,HS,mae,Wilcoxon,proposed vs hgb,22,11.59693457333877,3.337860107421875e-06,0.00016021728515625
+Camargo,FP,HS,mae,Wilcoxon,proposed vs rf,22,10.692912149175129,9.5367431640625e-07,5.435943603515625e-05
+Camargo,FP,HS,mae,Wilcoxon,proposed vs cnn,22,9.774039573799078,9.5367431640625e-07,5.435943603515625e-05
+Camargo,FP,TO,mae,Friedman,peak_anchored vs salarian2004 vs greene2010 vs aminian2002 vs catalfamo2010 vs fixed_threshold vs hgb vs rf vs cnn,22,125.73333333333335,2.1644507152015303e-23,
+Camargo,FP,TO,mae,Wilcoxon,proposed vs salarian2004,22,17.864118158320736,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,TO,mae,Wilcoxon,proposed vs greene2010,22,-3.420267413991244,0.0014548301696777344,0.03928041458129883
+Camargo,FP,TO,mae,Wilcoxon,proposed vs aminian2002,22,9.392873865616181,4.76837158203125e-07,3.719329833984375e-05
+Camargo,FP,TO,mae,Wilcoxon,proposed vs catalfamo2010,22,3.292577736292227,0.00017690658569335938,0.005837917327880859
+Camargo,FP,TO,mae,Wilcoxon,proposed vs fixed_threshold,22,0.06019202955442182,0.898735523223877,1.0
+Camargo,FP,TO,mae,Wilcoxon,proposed vs hgb,22,14.481595607628046,3.337860107421875e-06,0.00016021728515625
+Camargo,FP,TO,mae,Wilcoxon,proposed vs rf,22,12.681257936085872,2.384185791015625e-06,0.00011920928955078125
+Camargo,FP,TO,mae,Wilcoxon,proposed vs cnn,22,11.789579838531985,9.059906005859375e-06,0.0003895759582519531
