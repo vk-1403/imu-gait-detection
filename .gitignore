@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+cache/
+results/*/
+data/dataset1_raw/
+data/dataset2_compact/
