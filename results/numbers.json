@@ -1535,5 +1535,19 @@
  "SIGN_N": 3132,
  "SIGN_TIES": 15,
  "SIGN_OK": 3111,
- "SIGN_SUBJ_OK": 3025
+ "SIGN_SUBJ_OK": 3025,
+ "HO": {
+  "dev_FP_HS_recall": 0.9560842654493472,
+  "held_FP_HS_recall": 0.9515098155132377,
+  "dev_FP_TO_recall": 0.8895674868941402,
+  "held_FP_TO_recall": 0.9255375571275369,
+  "dev_gc_HS_recall": 0.8565555949693522,
+  "dev_gc_HS_f1": 0.8803874161968687,
+  "held_gc_HS_recall": 0.8610941499594909,
+  "held_gc_HS_f1": 0.8833075894201821,
+  "dev_gc_TO_recall": 0.884569671698905,
+  "dev_gc_TO_f1": 0.9020347377396526,
+  "held_gc_TO_recall": 0.9125832343323654,
+  "held_gc_TO_f1": 0.9294131829213539
+ }
 }
