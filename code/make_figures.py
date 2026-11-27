@@ -38,8 +38,8 @@ for x0, stance, title in [(0.0, True, 'Stance'), (2.25, False, 'Swing')]:
     imu(ax, pac, ang); imu(ax, camc, ang, 0.13, 0.22)
     ax.text(x0 + 0.9, 3.95, title, ha='center', fontsize=8)
     if stance:
-        ax.annotate('C', xy=camc, xytext=(x0 + 1.55, 1.35), fontsize=7.5, va='center', arrowprops=dict(arrowstyle='-', lw=0.6))
-        ax.annotate('P', xy=pac, xytext=(x0 + 1.55, 0.75), fontsize=7.5, va='center', arrowprops=dict(arrowstyle='-', lw=0.6))
+        ax.annotate('D2', xy=camc, xytext=(x0 + 1.55, 1.35), fontsize=7.5, va='center', arrowprops=dict(arrowstyle='-', lw=0.6))
+        ax.annotate('D1', xy=pac, xytext=(x0 + 1.55, 0.75), fontsize=7.5, va='center', arrowprops=dict(arrowstyle='-', lw=0.6))
 a = (2.25 + 0.75, 1.05)
 ax.add_patch(FancyArrowPatch((a[0] - 0.35, a[1] + 0.05), (a[0] + 0.3, a[1] - 0.5), connectionstyle='arc3,rad=0.4', arrowstyle='-|>', mutation_scale=8, lw=1.1, color=RED, zorder=7))
 ax.text(a[0] + 0.38, a[1] - 0.45, r'$\omega>0$', color=RED, fontsize=7.5, va='top')

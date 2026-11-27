@@ -96,5 +96,15 @@ N['ABL'] = pd.read_csv(f'{R}/ablation.csv').set_index('variant').to_dict(orient=
 # ---- sign check
 Sg = pd.read_csv(f'{R}/polarity_check.csv'); Sg['tie'] = (Sg.f1_pos - Sg.f1_neg).abs() < 0.05; x = Sg[~Sg.tie]
 N['SIGN_N'] = len(x); N['SIGN_TIES'] = int(Sg.tie.sum()); N['SIGN_OK'] = int((x.trial_rule == x.best).sum()); N['SIGN_SUBJ_OK'] = int((x.subject_rule == x.best).sum())
+# ---- development (AB06-AB17) versus held-out (AB18-AB30) subjects of Dataset 2, proposed detector, +/-100 ms
+_P = pd.read_csv(f'{R}/per_subject_all.csv')
+_P = _P[(_P.detector == 'peak_anchored') & (_P.dataset == 'Camargo') & (_P.tol == 100)].copy()
+_P['grp'] = np.where(_P.subject <= 'AB17', 'dev', 'held')
+N['HO'] = {}
+for (ref, ev), g in _P.groupby(['ref', 'event']):
+    s_ = g.groupby(['grp', 'subject'])[['recall', 'f1']].mean().groupby('grp').mean()
+    for grp in ('dev', 'held'):
+        N['HO'][f'{grp}_{ref}_{ev}_recall'] = float(s_.loc[grp, 'recall'])
+        if ref == 'gc': N['HO'][f'{grp}_{ref}_{ev}_f1'] = float(s_.loc[grp, 'f1'])
 json.dump(N, open(f'{PTH.RESULTS}/numbers.json', 'w'), indent=1, default=float)
 print(json.dumps({k: v for k, v in N.items() if k not in ('T', 'B', 'PH', 'SG', 'ABL')}, indent=0, default=float))
