@@ -65,7 +65,7 @@ def evaluate(P, pac, cam, tol=0.1):
                                                      ae=np.sum([abs(e) for _, _, e in m])))
     for r in cam:
         x = r['x'] if P['polarity'] else r['x'] * r['raw_sign']   # undo the subject-level sign fix for the no-polarity variant
-        hi, ti = detect(x, 200.0, P); hs = r['t'][hi]; to = r['t'][ti]
+        hi, ti = detect(x, 1 / np.median(np.diff(r['t'])), P)   # sampling rate from the time stamps, as in evaluate.py; hs = r['t'][hi]; to = r['t'][ti]
         for ref, ev, d, g in [('FP', 'HS', hs, r['fp_hs']), ('FP', 'TO', to, r['fp_to']), ('gc', 'HS', hs, r['gc_hs']), ('gc', 'TO', to, r['gc_to'])]:
             m = M.match(d, g, tol)
             nd = np.sum((d >= g.min() - 0.3) & (d <= g.max() + 0.3)) if (ref == 'gc' and len(g)) else np.nan

@@ -98,7 +98,7 @@ fig.savefig(f'{OUT}/Fig1_method.png'); fig.savefig(f'{OUT}/Fig1_method.pdf'); pl
 
 # ======================= Fig. 2
 import re as _re
-_BIB = dict(Aminian2002='11', Salarian2004='12', Greene2010='13', Catalfamo2010='14')   # reference numbers in the paper
+_BIB = dict(Aminian2002='9', Salarian2004='10', Greene2010='11', Catalfamo2010='12')   # reference numbers in the paper
 if os.path.exists(os.environ.get('PAPER_AUX', '')): _BIB = dict(_re.findall(r'\\bibcite\{([^}]*)\}\{([^}]*)\}', open(os.environ['PAPER_AUX']).read()))
 def _cite(name, key): return f'{name} et al. [{_BIB.get(key, "?")}]'
 NAMES = dict(peak_anchored='Proposed', rf='RF (trained)', hgb='HGB (trained)', cnn='TCN (trained)',

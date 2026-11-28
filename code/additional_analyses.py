@@ -28,6 +28,7 @@ def data():
 
 
 def sign(g): return g if np.percentile(g, 99) > -np.percentile(g, 1) else -g
+def rate(r): return r['fs'] if 'fs' in r else 1 / np.median(np.diff(r['t']))   # Dataset 2: from the time stamps, as in evaluate.py
 def lowpass(g, fs, fc=15.0): b, a = butter(4, fc / (fs / 2)); return filtfilt(b, a, g)
 
 
@@ -112,7 +113,7 @@ def score(f, tol=0.1):
     pac, cam = data(); rows = []
     for ds, recs in [('D1', pac), ('D2', cam)]:
         for r in recs:
-            fs = r.get('fs', 200.0); t = r['t'] if 't' in r else np.arange(len(r['x'])) / fs
+            fs = rate(r); t = r['t'] if 't' in r else np.arange(len(r['x'])) / fs
             hs, to = f(r['x'], fs); hs = t[np.asarray(hs, int)]; to = t[np.asarray(to, int)]
             refs = [('FP', 'HS', hs, r['hs'] if ds == 'D1' else r['fp_hs']), ('FP', 'TO', to, r['to'] if ds == 'D1' else r['fp_to'])]
             if ds == 'D2': refs += [('gc', 'HS', hs, r['gc_hs']), ('gc', 'TO', to, r['gc_to'])]
@@ -159,7 +160,7 @@ def sigma(n_events=300, n_mc=200, seed=0):
     for ds, recs in zip(['D1', 'D2'], data()):
         picks = []
         for r in recs:
-            fs = r.get('fs', 200.0); raw = sign(r['x'].copy()); hi, ti = AB.detect(raw, fs, dict(AB.BASE))
+            fs = rate(r); raw = sign(r['x'].copy()); hi, ti = AB.detect(raw, fs, dict(AB.BASE))
             picks += [(r, fs, raw, ev, k) for ev, idx in [('HS', hi), ('TO', ti)] for k in idx]
         cache = {}
         for i in rng.choice(len(picks), size=min(n_events, len(picks)), replace=False):
@@ -222,7 +223,7 @@ def references():
     for fc in [15.0, 30.0]:
         P = dict(AB.BASE); P['fc'] = fc
         for r in cam:
-            hi, ti = AB.detect(r['x'], 200.0, P); d = r['t'][hi]
+            hi, ti = AB.detect(r['x'], rate(r), P); d = r['t'][hi]
             mf = {j: e for i, j, e in M.match(d, r['fp_hs'], 0.15)}; mg = {j: e for i, j, e in M.match(d, r['gc_hs'], 0.15)}
             rows += [dict(fc=fc, subj=r['subj'], e_fp=mf[j] * 1000, e_gc=mg[j] * 1000) for j in set(mf) & set(mg)]
             if r['act'] == 'treadmill' and len(mf) >= 10:
