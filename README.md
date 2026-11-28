@@ -14,7 +14,7 @@ The detector itself is `code/peak_anchored_detector.py`. Everything else reprodu
 |---|---|
 | `code/` | detector, re-implemented comparison methods, trained models and all evaluation scripts |
 | `data/derived/` | force-platform reference events of Dataset 1 |
-| `data/prep/` | extraction of the required channels of Dataset 2 |
+| `data/prep/` | builds the compact Dataset 2 files from the public release |
 | `results/` | summary results used in the paper (`numbers.json` holds every number quoted in the text) |
 | `run_all.sh` | runs the whole pipeline in order |
 
@@ -26,16 +26,17 @@ All results were computed on one PC (Intel Core i5-12400F, 16 GB RAM, Ubuntu 22.
 pip install -r requirements.txt
 ```
 
-`requirements-lock.txt` lists the exact version of every package in that environment (`pip install -r requirements-lock.txt`).
+`requirements.txt` is the installable list of the packages the scripts need. `requirements-lock.txt` is a record of the complete environment (`pip freeze`) and also names packages of the operating system, so it is meant for reference and not for direct installation.
 
 ## Data
 
 Both datasets are public and are not redistributed here.
 
 * **Dataset 1**, Pacini Panebianco et al., *Foot platform and inertial wearable sensor data gait*, Mendeley Data v3, DOI [10.17632/92xd6g4xpk.3](https://doi.org/10.17632/92xd6g4xpk.3) (CC BY 4.0). Unzip it and point `DATASET1_DIR` to the folder that contains `IMU data` and `Synchronized Force Platform Data`.
-* **Dataset 2**, Camargo et al., *J. Biomech.* 119 (2021) 110320, [epic.gatech.edu](https://www.epic.gatech.edu/opensource-biomechanics-camargo-et-al/). Only the right-shank and right-foot IMUs, the force plates and the `gcRight` gait-cycle annotation are used. See `data/README.md` for the compact files the scripts read, and point `DATASET2_DIR` to them.
+* **Dataset 2**, Camargo et al., *J. Biomech.* 119 (2021) 110320, [epic.gatech.edu](https://www.epic.gatech.edu/opensource-biomechanics-camargo-et-al/). Only the right-shank and right-foot IMUs, the force plates and the `gcRight` gait-cycle annotation are used. `data/prep/build_compact_files.py` builds the compact files that the scripts read from the unpacked release (see `data/README.md`). Point `DATASET2_DIR` to its output folder.
 
 ```
+python data/prep/build_compact_files.py /path/to/camargo_release /path/to/dataset2_compact
 export DATASET1_DIR=/path/to/dataset1
 export DATASET2_DIR=/path/to/dataset2_compact
 ```
@@ -64,6 +65,12 @@ export DATASET2_DIR=/path/to/dataset2_compact
 The leave-one-subject-out training runs one fold per call (`train_loso.py <rf|hgb|cnn> <subject>`), followed by `final` and `merge`. Method names accepted by `evaluate.py` are `peak_anchored`, `salarian2004`, `catalfamo2010`, `greene2010`, `aminian2002`, `fixed_threshold`, `rf`, `hgb` and `cnn`.
 
 The comparison methods (Aminian et al. 2002, Salarian et al. 2004, Greene et al. 2010, Catalfamo et al. 2010) were re-implemented from their publications with their published parameters (`literature_methods.py`, `catalfamo2010.py`). Steps that could not be reproduced are listed in the Supplementary Material of the paper. `fixed_threshold.py` is the fixed-threshold rule, and `metrics.py` holds the event matching and bootstrap code shared by all scripts.
+
+`peak_anchored_detector.py` returns the event samples. The local timing-precision index of each event is computed in `phases_and_uncertainty.py`.
+
+The sampling rate passed to the detectors on Dataset 2 is estimated from the time stamps of each recording (199.8–200.1 Hz) in `evaluate.py`, `ablation.py` and `additional_analyses.py`. `phases_and_uncertainty.py`, `msw_height_rule.py` and `polarity_check.py` use the nominal 200 Hz.
+
+The reference numbers in the figure labels follow the reference list of the paper. They are set in `make_figures.py` and can be read from the LaTeX `.aux` file of the paper through the `PAPER_AUX` variable.
 
 ## Contact
 
