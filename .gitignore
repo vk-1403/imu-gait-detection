@@ -4,3 +4,4 @@ cache/
 results/*/
 data/dataset1_raw/
 data/dataset2_compact/
+!results/additional/

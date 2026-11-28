@@ -31,4 +31,6 @@ for s in free train_hgb_HS train_hgb_TO train_rf_HS train_rf_TO time_hgb time_rf
   python run_time.py $s                               # run time on one CPU thread
 done
 
+python additional_analyses.py                         # Supplementary Tables S17-S23
+
 python make_figures.py
