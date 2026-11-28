@@ -1,4 +1,4 @@
-"""(1) Per-event timing uncertainty sigma_t (Eq. (2) of the paper) and its relation to the observed error against
+"""(1) Per-event local timing-precision index sigma_t (Eqs. (2) and (3) of the paper) and its relation to the observed error against
 the force platforms. (2) Gait-phase durations against the force platforms: stance time (both datasets), stride and
 swing time on the instrumented treadmill of Dataset 2 (consecutive right-belt contacts). (3) Median and quartiles
 of the signed errors on Dataset 1 in the format of Pacini Panebianco et al. (2018)."""

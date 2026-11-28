@@ -1,4 +1,4 @@
-"""Temporal convolutional network (CNN) for HS/TO detection from the sagittal shank gyro.
+"""Temporal convolutional network (TCN) for HS/TO detection from the sagittal shank gyro.
 Same input, labels, validation and event extraction as tree_models.py, so the three trained models differ only in
 the learner.
   input  : polarity-corrected sagittal gyro, low-pass 15 Hz, resampled to 100 Hz, (x - median)/IQR per trial

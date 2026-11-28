@@ -1,6 +1,6 @@
 """Figures of the paper (printed sizes).
 Fig. 1 method, Fig. 2 comparison of all methods, Fig. 3 walking speed, Fig. 4 matching tolerance,
-Fig. 5 subject-level robustness, Fig. 6 gait-phase durations and timing uncertainty. Written to results/figures/."""
+Fig. 5 subject-level robustness, Fig. 6 gait-phase durations and timing-precision index. Written to results/figures/."""
 import paths as PTH
 import os, sys, json, numpy as np, pandas as pd, scipy.io as sio
 sys.path.insert(0, f'{PTH.CODE}')
@@ -101,7 +101,7 @@ import re as _re
 _BIB = dict(Aminian2002='11', Salarian2004='12', Greene2010='13', Catalfamo2010='14')   # reference numbers in the paper
 if os.path.exists(os.environ.get('PAPER_AUX', '')): _BIB = dict(_re.findall(r'\\bibcite\{([^}]*)\}\{([^}]*)\}', open(os.environ['PAPER_AUX']).read()))
 def _cite(name, key): return f'{name} et al. [{_BIB.get(key, "?")}]'
-NAMES = dict(peak_anchored='Proposed', rf='RF (trained)', hgb='HGB (trained)', cnn='CNN (trained)',
+NAMES = dict(peak_anchored='Proposed', rf='RF (trained)', hgb='HGB (trained)', cnn='TCN (trained)',
              salarian2004=_cite('Salarian', 'Salarian2004'), catalfamo2010=_cite('Catalfamo', 'Catalfamo2010'),
              greene2010=_cite('Greene', 'Greene2010'), aminian2002=_cite('Aminian', 'Aminian2002'), fixed_threshold='Fixed threshold')
 COL = dict(peak_anchored=BLUE, rf=RED, hgb=MAGENTA, cnn=GREEN, salarian2004=OLIVE, catalfamo2010=ORANGE, greene2010=CYAN, aminian2002=VIOLET, fixed_threshold=GRAY)
